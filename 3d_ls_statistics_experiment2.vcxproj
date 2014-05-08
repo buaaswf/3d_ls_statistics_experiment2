@@ -63,6 +63,7 @@
     <ClInclude Include="CImg.h" />
     <ClInclude Include="DetectMemLeak.h" />
     <ClInclude Include="DivideRegion.h" />
+    <ClInclude Include="Fast_ls.h" />
     <ClInclude Include="Filter.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="ProcessDirty.h" />
@@ -78,6 +79,7 @@
     <ClInclude Include="WipeNioisePde.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Fast_ls.cpp" />
     <ClCompile Include="Filter.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />

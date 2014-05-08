@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include<iostream>
 #include <fstream>
-
+#include <vector>
+#include "Fast_ls.h"
 //#include"vol_math_Raw3D_Independt.h"
 //#define u_char unsigned char
 #define PIXTYPE float
@@ -108,7 +109,15 @@ public:				//---------------init fcns-------------
 		}
 		return *this;
 	}
-	
+	//Vector Vector::operator + (const Vector& v)
+	//vector<Point> vector<Point>::operator + (const vector<Point> volume)
+	//{
+	//	for (int i = 0; i<size(); ++i)
+	//	{
+	//		this->data[i] += volume.data[i];
+	//	}
+	//	return *this;
+	//}
 	Raw& operator+=(const PIXTYPE val)
 	{
 		for (int i = 0; i < size(); ++i)

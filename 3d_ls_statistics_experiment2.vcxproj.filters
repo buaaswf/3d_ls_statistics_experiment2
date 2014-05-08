@@ -63,6 +63,9 @@
     <ClInclude Include="WipeNioisePde.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Fast_ls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Filter.cpp">
@@ -96,6 +99,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="WipeNioisePde.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Fast_ls.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
