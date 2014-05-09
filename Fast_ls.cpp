@@ -105,6 +105,65 @@ vector<Point> gradientxgc( Raw &g ,vector <Point> narrow)
 	}
 	return ret;
 }
+
+Raw& gradientxgc( Raw &g ) 
+{
+	int n=g.getXsize();
+	int m=g.getYsize();
+	int l=g.getZsize();
+	Raw ret(g);
+	int i,j,k,temp1,temp2;
+	//vector<Point> ret;
+	//for(i=0;i<n;i++)
+	//{
+	//	for(j=0;j<m;j++)
+	//	{
+	//		for ( k=0;k < l;k++)
+	//		{
+	//			if(i>0)
+	//				temp1=i-1;
+	//			else
+	//				temp1=0;
+	//			if (i<n-1)
+	//				temp2=i+1;
+	//			else 
+	//				temp2=n-1;
+	//			ret.put(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0);
+	//			//if (ret.get(i,j,k)!=0)
+	//			//{
+	//			//	cout<<"i="<<i<<",j="<<j<<",k="<<k<<ret.get(i,j,k)<<endl;
+	//			//}
+	//		}			
+	//	}
+	//}
+	//
+	//for (vector<Point>::iterator it = narrow.begin() ; it != narrow.end(); ++it)
+	//{
+	//	int i=it->xindex;
+	//	if(i>0)
+	//		temp1=i-1;
+	//	else
+	//		temp1=0;
+	//	if (i<n-1)
+	//		temp2=i+1;
+	//	else 
+	//		temp2=n-1;
+	//	ret.push_back(Point(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0));
+
+	//}
+	for(int i=0; i<n; ++i)
+	{
+		for(int j = 0; j < m; ++j )
+		{
+			for(int k = 0; k < l; ++k)
+			{
+				ret.put(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0);
+			}
+		}
+	}
+
+	return ret;
+}
 //real in use swf 20140508
 vector<Point> gradientygc( Raw & g,vector<Point> narrow ) 
 {
@@ -149,7 +208,64 @@ vector<Point> gradientygc( Raw & g,vector<Point> narrow )
 	return ret;
 	
 }
+Raw& gradientygc( Raw &g ) 
+{
+	int n=g.getXsize();
+	int m=g.getYsize();
+	int l=g.getZsize();
+	Raw ret(g);
+	int i,j,k,temp1,temp2;
+	//vector<Point> ret;
+	//for(i=0;i<n;i++)
+	//{
+	//	for(j=0;j<m;j++)
+	//	{
+	//		for ( k=0;k < l;k++)
+	//		{
+	//			if(i>0)
+	//				temp1=i-1;
+	//			else
+	//				temp1=0;
+	//			if (i<n-1)
+	//				temp2=i+1;
+	//			else 
+	//				temp2=n-1;
+	//			ret.put(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0);
+	//			//if (ret.get(i,j,k)!=0)
+	//			//{
+	//			//	cout<<"i="<<i<<",j="<<j<<",k="<<k<<ret.get(i,j,k)<<endl;
+	//			//}
+	//		}			
+	//	}
+	//}
+	//
+	//for (vector<Point>::iterator it = narrow.begin() ; it != narrow.end(); ++it)
+	//{
+	//	int i=it->xindex;
+	//	if(i>0)
+	//		temp1=i-1;
+	//	else
+	//		temp1=0;
+	//	if (i<n-1)
+	//		temp2=i+1;
+	//	else 
+	//		temp2=n-1;
+	//	ret.push_back(Point(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0));
 
+	//}
+	for(int i=0; i<n; ++i)
+	{
+		for(int j = 0; j < m; ++j )
+		{
+			for(int k = 0; k < l; ++k)
+			{
+				ret.put(i,j,k,(g.get(temp2,j,k)-g.get(temp1,j,k))/2.0);
+			}
+		}
+	}
+
+	return ret;
+}
 // real in use swf 20140508
 vector<Point> gradientzgc( Raw &g ,vector <Point> narrow) 
 {
